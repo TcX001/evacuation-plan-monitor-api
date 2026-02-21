@@ -1,0 +1,21 @@
+# Build folders
+bin/
+obj/
+
+# Logs
+logs/
+
+# Secrets
+.env
+*.env
+appsettings.Development.json
+
+# IDE
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+
+# macOS
+.DS_Store
