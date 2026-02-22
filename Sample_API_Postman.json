@@ -1,0 +1,1806 @@
+{
+  "info": {
+    "name": "Sample API Collection",
+    "description": null,
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Users",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "disabled": false,
+            "type": "default"
+          }
+        ],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "This request retrieves a list of users from the JSONPlaceholder API.",
+        "url": {
+          "raw": "http://localhost:5000/api/simulation/clear",
+          "protocol": "http",
+          "host": [
+            "localhost:5000"
+          ],
+          "path": [
+            "api",
+            "simulation",
+            "clear"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"confirmation\": \"DELETE\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "test",
+      "item": [
+        {
+          "name": "crypto/sync",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json",
+                "disabled": false,
+                "type": "default"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE0NjkwMzAsImV4cCI6MTc3MjA3MzgzMH0.32re-iaUji5uzhZe_-C68WL-f9_ZOarG1OswGg4Yy4g",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3000/api/admin/rates/crypto/sync",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "rates",
+                "crypto",
+                "sync"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "crypto",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json",
+                "disabled": false,
+                "type": "default"
+              }
+            ],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3000/api/rates/crypto",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "rates",
+                "crypto"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "fiat/sync",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json",
+                "disabled": false,
+                "type": "default"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE0NjkwMzAsImV4cCI6MTc3MjA3MzgzMH0.32re-iaUji5uzhZe_-C68WL-f9_ZOarG1OswGg4Yy4g",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3000/api/admin/rates/crypto/sync",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "rates",
+                "crypto",
+                "sync"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "fiat",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json",
+                "disabled": false,
+                "type": "default"
+              }
+            ],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3000/api/rates/fiat?target=THB",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "rates",
+                "fiat"
+              ],
+              "query": [
+                {
+                  "key": "target",
+                  "value": "THB"
+                }
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Auth",
+          "item": [
+            {
+              "name": "login 2",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/auth/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "login"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"admin@exchange.com\",\n  \"password\": \"admin123\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "login",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/auth/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "login"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"admin@exchange.com\",\n  \"password\": \"admin123\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "profile",
+              "request": {
+                "method": "get",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjU4NjIsImV4cCI6MTc3MjE3MDY2Mn0.VMFdelz9Qxg91x6Txi6cQM6m_ffDyURZWyglIew6m-0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/auth/profile",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "profile"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "register",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/auth/register",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "register"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"password123\",\n  \"name\": \"John Doe\",\n  \"phone\": \"+66123456789\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "advertisements",
+          "item": [
+            {
+              "name": "advertisement my",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer <YOUR_TOKEN>",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjU4NjIsImV4cCI6MTc3MjE3MDY2Mn0.VMFdelz9Qxg91x6Txi6cQM6m_ffDyURZWyglIew6m-0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/advertisements/my?status=all",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "advertisements",
+                    "my"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "all"
+                    },
+                    {
+                      "key": "status",
+                      "value": "inactive"
+                    },
+                    {
+                      "key": "status",
+                      "value": "completed"
+                    },
+                    {
+                      "key": "status",
+                      "value": "all"
+                    }
+                  ],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "advertisement",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer <YOUR_TOKEN>",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjgyNTMsImV4cCI6MTc3MjE3MzA1M30.aI8g61O9TSozAvP1Z5s6_55p9I1BRN1oL5zH2-kTkY0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/advertisements",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "advertisements"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "advertisements",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer <เอา_TOKEN_ของ_USER1_มาใส่>",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjU4NjIsImV4cCI6MTc3MjE3MDY2Mn0.VMFdelz9Qxg91x6Txi6cQM6m_ffDyURZWyglIew6m-0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/advertisements",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "advertisements"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"side\": \"sell\",\n  \"crypto_currency_id\": \"1\",\n  \"fiat_currency_id\": \"1\",\n  \"price_per_unit\": \"10000\",\n  \"min_amount\": \"0.01\",\n  \"max_amount\": \"1\",\n  \"available_amount\": \"0.5\",\n  \"payment_methods\": [\n    \"Bank Transfer\",\n    \"PromptPay\"\n  ],\n  \"terms\": \"โอนเงินภายใน 15 นาที\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "path advertisement",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjU4NjIsImV4cCI6MTc3MjE3MDY2Mn0.VMFdelz9Qxg91x6Txi6cQM6m_ffDyURZWyglIew6m-0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/advertisements/6/status",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "advertisements",
+                    "6",
+                    "status"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"status\": \"inactive\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "trades",
+          "item": [
+            {
+              "name": "release",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "authorization",
+                    "value": "Bearer <TOKEN_ของผู้ขาย>",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjU4NjIsImV4cCI6MTc3MjE3MDY2Mn0.VMFdelz9Qxg91x6Txi6cQM6m_ffDyURZWyglIew6m-0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/trades/3/release",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "trades",
+                    "3",
+                    "release"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "trades cancel",
+              "request": {
+                "method": "patch",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjU4NjIsImV4cCI6MTc3MjE3MDY2Mn0.VMFdelz9Qxg91x6Txi6cQM6m_ffDyURZWyglIew6m-0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/trades/1/cancel",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "trades",
+                    "1",
+                    "cancel"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "trades confirm",
+              "request": {
+                "method": "patch",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "authorization",
+                    "value": "Bearer <TOKEN_ของผู้ซื้อ_USER_ID_1>",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjgyNTMsImV4cCI6MTc3MjE3MzA1M30.aI8g61O9TSozAvP1Z5s6_55p9I1BRN1oL5zH2-kTkY0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/trades/3/confirm",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "trades",
+                    "3",
+                    "confirm"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "trades my",
+              "request": {
+                "method": "get",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "authorization",
+                    "value": "Bearer <TOKEN_ของคุณ>",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjU4NjIsImV4cCI6MTc3MjE3MDY2Mn0.VMFdelz9Qxg91x6Txi6cQM6m_ffDyURZWyglIew6m-0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/trades/my",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "trades",
+                    "my"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "trades",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "authorization",
+                    "value": "Bearer <TOKEN_ของผู้ซื้อ>",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "content-type",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjgyNTMsImV4cCI6MTc3MjE3MzA1M30.aI8g61O9TSozAvP1Z5s6_55p9I1BRN1oL5zH2-kTkY0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/trades",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "trades"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"advertisement_id\": \"7\", // ID ของประกาศที่ต้องการซื้อ\n  \"crypto_amount\": \"0.5\" // จำนวนเหรียญ BTC/ETH ที่อยากซื้อจากโพสต์นั้น\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "sync",
+          "item": [
+            {
+              "name": "crypto",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjU4NjIsImV4cCI6MTc3MjE3MDY2Mn0.VMFdelz9Qxg91x6Txi6cQM6m_ffDyURZWyglIew6m-0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/admin/rates/crypto/sync",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "rates",
+                    "crypto",
+                    "sync"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "fiat",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjU4NjIsImV4cCI6MTc3MjE3MDY2Mn0.VMFdelz9Qxg91x6Txi6cQM6m_ffDyURZWyglIew6m-0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/admin/rates/fiat/sync",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "rates",
+                    "fiat",
+                    "sync"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "wallet",
+          "item": [
+            {
+              "name": "deposit",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjgyNTMsImV4cCI6MTc3MjE3MzA1M30.aI8g61O9TSozAvP1Z5s6_55p9I1BRN1oL5zH2-kTkY0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/wallets/5/deposit",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "wallets",
+                    "5",
+                    "deposit"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"amount\": \"2500000.00\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "transactions",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjU4NjIsImV4cCI6MTc3MjE3MDY2Mn0.VMFdelz9Qxg91x6Txi6cQM6m_ffDyURZWyglIew6m-0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/wallets/11/transactions",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "wallets",
+                    "11",
+                    "transactions"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "wallet 2",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer <YOUR_TOKEN>",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjU4NjIsImV4cCI6MTc3MjE3MDY2Mn0.VMFdelz9Qxg91x6Txi6cQM6m_ffDyURZWyglIew6m-0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/wallets",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "wallets"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "wallet",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer <YOUR_TOKEN>",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE2MzQ4MDIsImV4cCI6MTc3MjIzOTYwMn0._6uWbsqKdkqP4mndLS5DkGXjK4MIB4dTpSOBAuSARDs",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/wallets",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "wallets"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "withdraw",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer <YOUR_TOKEN>",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjU4NjIsImV4cCI6MTc3MjE3MDY2Mn0.VMFdelz9Qxg91x6Txi6cQM6m_ffDyURZWyglIew6m-0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/wallets/11/withdraw",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "wallets",
+                    "11",
+                    "withdraw"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"amount\": \"500\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "transfers",
+          "item": [
+            {
+              "name": "h transfers",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer <YOUR_TOKEN>",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjU4NjIsImV4cCI6MTc3MjE3MDY2Mn0.VMFdelz9Qxg91x6Txi6cQM6m_ffDyURZWyglIew6m-0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/transfers",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "transfers"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "transfers EXTERNAL",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer <YOUR_TOKEN>",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjU4NjIsImV4cCI6MTc3MjE3MDY2Mn0.VMFdelz9Qxg91x6Txi6cQM6m_ffDyURZWyglIew6m-0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/transfers",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "transfers"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"crypto_currency_id\": \"1\",\n  \"amount\": \"0.1\",\n  \"type\": \"external\",\n  \"external_address\": \"0x123abc456def...\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "transfers INTERNAL",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer <YOUR_TOKEN>",
+                    "disabled": false,
+                    "type": "default"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZW1haWwiOiJhZG1pbkBleGNoYW5nZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzE1NjU4NjIsImV4cCI6MTc3MjE3MDY2Mn0.VMFdelz9Qxg91x6Txi6cQM6m_ffDyURZWyglIew6m-0",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:3000/api/transfers",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:3000"
+                  ],
+                  "path": [
+                    "api",
+                    "transfers"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"crypto_currency_id\": \"1\",\n  \"amount\": \"0.1\",\n  \"type\": \"INTERNAL\",\n  \"receiver_email\": \"user2@example.com\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "test2",
+      "item": [
+        {
+          "name": "vehicles",
+          "item": [
+            {
+              "name": "POST vehicles",
+              "request": {
+                "method": "post",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://52.230.39.131/api/vehicles",
+                  "protocol": "http",
+                  "host": [
+                    "52",
+                    "230",
+                    "39",
+                    "131"
+                  ],
+                  "path": [
+                    "api",
+                    "vehicles"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"vehicleId\": \"V-101\",\n  \"capacity\": 40,\n  \"type\": \"bus\",\n  \"locationCoordinates\": {\n    \"latitude\": 13.7650,\n    \"longitude\": 100.5381\n  },\n  \"speed\": 60\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "DELETE vehicles ",
+              "request": {
+                "method": "delete",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://52.230.39.131/api/vehicles/V-101",
+                  "protocol": "http",
+                  "host": [
+                    "52",
+                    "230",
+                    "39",
+                    "131"
+                  ],
+                  "path": [
+                    "api",
+                    "vehicles",
+                    "V-101"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "PATCH vehicles",
+              "request": {
+                "method": "patch",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://52.230.39.131/api/vehicles/V-101",
+                  "protocol": "http",
+                  "host": [
+                    "52",
+                    "230",
+                    "39",
+                    "131"
+                  ],
+                  "path": [
+                    "api",
+                    "vehicles",
+                    "V-101"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isAvailable\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "vehicles",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://52.230.39.131/api/vehicles/V-101",
+                  "protocol": "http",
+                  "host": [
+                    "52",
+                    "230",
+                    "39",
+                    "131"
+                  ],
+                  "path": [
+                    "api",
+                    "vehicles",
+                    "V-101"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "zones",
+          "item": [
+            {
+              "name": "POST zones",
+              "request": {
+                "method": "post",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://52.230.39.131/api/evacuation-zones",
+                  "protocol": "http",
+                  "host": [
+                    "52",
+                    "230",
+                    "39",
+                    "131"
+                  ],
+                  "path": [
+                    "api",
+                    "evacuation-zones"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"zoneId\": \"Z-001\",\n  \"locationCoordinates\": {\n    \"latitude\": 13.7563,\n    \"longitude\": 100.5018\n  },\n  \"numberOfPeople\": 70,\n  \"urgencyLevel\": 5\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "DELETE zones",
+              "request": {
+                "method": "delete",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://52.230.39.131/api/evacuation-zones/Z-001",
+                  "protocol": "http",
+                  "host": [
+                    "52",
+                    "230",
+                    "39",
+                    "131"
+                  ],
+                  "path": [
+                    "api",
+                    "evacuation-zones",
+                    "Z-001"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "PATCH zones",
+              "request": {
+                "method": "patch",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://52.230.39.131/api/evacuation-zones/Z-001",
+                  "protocol": "http",
+                  "host": [
+                    "52",
+                    "230",
+                    "39",
+                    "131"
+                  ],
+                  "path": [
+                    "api",
+                    "evacuation-zones",
+                    "Z-001"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"urgencyLevel\": 5\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "zones",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://52.230.39.131/api/evacuation-zones/Z-001",
+                  "protocol": "http",
+                  "host": [
+                    "52",
+                    "230",
+                    "39",
+                    "131"
+                  ],
+                  "path": [
+                    "api",
+                    "evacuation-zones",
+                    "Z-001"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "evacuations",
+          "item": [
+            {
+              "name": "evacuations",
+              "request": {
+                "method": "delete",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://52.230.39.131/api/evacuations/clear",
+                  "protocol": "http",
+                  "host": [
+                    "52",
+                    "230",
+                    "39",
+                    "131"
+                  ],
+                  "path": [
+                    "api",
+                    "evacuations",
+                    "clear"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Confirmation\": \"CLEAR_ALL_DATA\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "evacuations plan",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://52.230.39.131/api/evacuations/plan",
+                  "protocol": "http",
+                  "host": [
+                    "52",
+                    "230",
+                    "39",
+                    "131"
+                  ],
+                  "path": [
+                    "api",
+                    "evacuations",
+                    "plan"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "evacuations status",
+              "request": {
+                "method": "get",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://52.230.39.131/api/evacuations/status",
+                  "protocol": "http",
+                  "host": [
+                    "52",
+                    "230",
+                    "39",
+                    "131"
+                  ],
+                  "path": [
+                    "api",
+                    "evacuations",
+                    "status"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "evacuations update",
+              "request": {
+                "method": "put",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false,
+                    "type": "default"
+                  }
+                ],
+                "auth": {
+                  "type": "noauth"
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://52.230.39.131/api/evacuations/update",
+                  "protocol": "http",
+                  "host": [
+                    "52",
+                    "230",
+                    "39",
+                    "131"
+                  ],
+                  "path": [
+                    "api",
+                    "evacuations",
+                    "update"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"zoneId\": \"Z-001\",\n  \"vehicleId\": \"V-101\",\n  \"peopleEvacuated\": 30\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "simulation",
+      "request": {
+        "method": "post",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:5000/api/simulation/run",
+          "protocol": "http",
+          "host": [
+            "localhost:5000"
+          ],
+          "path": [
+            "api",
+            "simulation",
+            "run"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    }
+  ],
+  "variable": []
+}
