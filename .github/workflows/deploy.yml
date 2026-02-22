@@ -31,6 +31,17 @@ jobs:
     needs: test-and-build-image
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
+      - name: Copy compose.prod.yml to VM
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          source: "compose.prod.yml"
+          target: "/home/${{ secrets.VM_USER }}/app"
+
       - name: SSH to Azure VM and Run
         uses: appleboy/ssh-action@v1
         with:
