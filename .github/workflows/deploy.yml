@@ -52,9 +52,13 @@ jobs:
             mkdir -p /home/${{ secrets.VM_USER }}/app
             cd /home/${{ secrets.VM_USER }}/app
             
+            ls -la
+            cat compose.prod.yml
+            
             echo "${{ secrets.ENV_FILE }}" > .env
             echo "API_IMAGE=${{ secrets.ACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:latest" >> .env
             
             echo "${{ secrets.ACR_PASSWORD }}" | docker login ${{ secrets.ACR_LOGIN_SERVER }} -u ${{ secrets.ACR_USERNAME }} --password-stdin
-            docker-compose -f compose.prod.yml pull
-            docker-compose -f compose.prod.yml up -d
+            
+            docker-compose -f compose.prod.yml -p evacuation-api pull
+            docker-compose -f compose.prod.yml -p evacuation-api up -d
