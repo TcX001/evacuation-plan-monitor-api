@@ -1,11 +1,10 @@
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
-COPY EvacuationAPI.csproj ./
+COPY backend/EvacuationAPI.csproj ./
 RUN dotnet restore
 
-COPY . .
-
+COPY backend/. .
 RUN dotnet publish -c Release -o /app/publish /p:UseAppHost=false
 
 

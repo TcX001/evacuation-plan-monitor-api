@@ -1,8 +1,6 @@
 services:
   api:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+    image: ${API_IMAGE}
     ports:
       - "${API_PORT:-8080}:8080"
     env_file:
