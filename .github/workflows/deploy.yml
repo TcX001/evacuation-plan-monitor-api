@@ -1,0 +1,48 @@
+name: CI/CD Pipeline (Evacuation API)
+
+on:
+  push:
+    branches: ["cloud"]
+
+env:
+  ACR_LOGIN_SERVER: ${{ secrets.ACR_LOGIN_SERVER }}
+  ACR_USERNAME: ${{ secrets.ACR_USERNAME }}
+  ACR_PASSWORD: ${{ secrets.ACR_PASSWORD }}
+  IMAGE_NAME: evacuation-api
+
+jobs:
+  test-and-build-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Build & Push to ACR
+        run: |
+          echo "${{ secrets.ACR_PASSWORD }}" | docker login ${{ env.ACR_LOGIN_SERVER }} -u ${{ env.ACR_USERNAME }} --password-stdin
+          docker build -f backend/Dockerfile -t ${{ env.ACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:latest .
+          docker push ${{ env.ACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:latest
+
+  deploy:
+    needs: test-and-build-image
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH to Azure VM and Run
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          script: |
+            mkdir -p /home/${{ secrets.VM_USER }}/app
+            cd /home/${{ secrets.VM_USER }}/app
+            
+            echo "${{ secrets.ENV_FILE }}" > .env
+            
+            echo "${{ secrets.ACR_PASSWORD }}" | docker login ${{ secrets.ACR_LOGIN_SERVER }} -u ${{ secrets.ACR_USERNAME }} --password-stdin
+            docker compose pull
+            docker compose up -d
