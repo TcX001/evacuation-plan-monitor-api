@@ -33,6 +33,7 @@ namespace EvacuationAPI.Services
             var zones = await _context.Zones
                 .Where(z => z.NumberOfPeople > z.Evacuated)
                 .OrderByDescending(z => z.UrgencyLevel)
+                .ThenByDescending(z => z.NumberOfPeople)
                 .ToListAsync();
 
             if (!zones.Any())
