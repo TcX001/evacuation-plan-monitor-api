@@ -21,7 +21,7 @@ namespace EvacuationAPI.Controllers
         {
             var vehicle = await _vehicleService.GetVehicleByIdAsync(id);
             if (vehicle == null) return NotFound();
-            return CreatedAtAction(nameof(GetVehicle), new { id = vehicle.VehicleId }, vehicle);
+            return Ok(vehicle);
         }
 
         [HttpPost]

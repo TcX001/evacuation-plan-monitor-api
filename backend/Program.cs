@@ -24,6 +24,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 var redisConnectionString = builder.Configuration["Redis:ConnectionString"] ?? "localhost:6379";
 builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisConnectionString));
 
+builder.Services.AddScoped<EvacuationService>();
 builder.Services.AddScoped<VehicleService>();
 builder.Services.AddScoped<ZoneService>();
 

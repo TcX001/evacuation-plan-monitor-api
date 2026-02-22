@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace EvacuationAPI.Controllers
 {
     [ApiController]
-    [Route("api/zones")]
+    [Route("api/evacuation-zones")]
     public class ZonesController : ControllerBase
     {
         private readonly ZoneService _zoneService;
@@ -21,7 +21,7 @@ namespace EvacuationAPI.Controllers
         {
             var zone = await _zoneService.GetZoneByIdAsync(id);
             if (zone == null) return NotFound();
-            return CreatedAtAction(nameof(GetZone), new { id = zone.ZoneId }, zone);
+            return Ok(zone);
         }
 
         [HttpPost]
