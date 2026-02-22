@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EvacuationAPI.Models
 {
-    public class EvacuationZone
+    public class Zone
     {
         [Key]
         [MaxLength(50)]

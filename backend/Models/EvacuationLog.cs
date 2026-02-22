@@ -20,7 +20,7 @@ namespace EvacuationAPI.Models
         public DateTime ExecutedAt { get; set; } = DateTime.UtcNow;
 
         [ForeignKey("ZoneId")]
-        public EvacuationZone? Zone { get; set; }
+        public Zone? Zone { get; set; }
 
         [ForeignKey("VehicleId")]
         public Vehicle? Vehicle { get; set; }
