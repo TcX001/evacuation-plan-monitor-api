@@ -52,9 +52,6 @@ jobs:
             mkdir -p /home/${{ secrets.VM_USER }}/app
             cd /home/${{ secrets.VM_USER }}/app
             
-            ls -la
-            cat compose.prod.yml
-            
             echo "${{ secrets.ENV_FILE }}" > .env
             echo "API_IMAGE=${{ secrets.ACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:latest" >> .env
             
